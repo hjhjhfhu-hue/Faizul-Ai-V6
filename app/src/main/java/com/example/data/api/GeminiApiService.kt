@@ -14,13 +14,13 @@ import retrofit2.http.Streaming
 import java.util.concurrent.TimeUnit
 
 interface GeminiApiService {
-    @POST("v1beta/models/gemini-2.5-flash:generateContent")
+    @POST("v1beta/models/gemini-3.5-flash:generateContent")
     suspend fun generateContent(
         @Query("key") apiKey: String = BuildConfig.GEMINI_API_KEY,
         @Body request: GenerateContentRequest
     ): GenerateContentResponse
 
-    @POST("v1beta/models/gemini-2.5-flash:streamGenerateContent")
+    @POST("v1beta/models/gemini-3.5-flash:streamGenerateContent")
     @Streaming
     suspend fun generateContentStream(
         @Query("key") apiKey: String = BuildConfig.GEMINI_API_KEY,

@@ -84,7 +84,7 @@ class ChatRepository(
         if (isImageGenerationRequest(userPrompt)) {
             val cleanPrompt = extractCleanImagePrompt(userPrompt)
             val encodedPrompt = try {
-                java.net.URLEncoder.encode(cleanPrompt, "UTF-8")
+                java.net.URLEncoder.encode(cleanPrompt, "UTF-8").replace("+", "%20")
             } catch (e: Exception) {
                 cleanPrompt.replace(" ", "%20")
             }

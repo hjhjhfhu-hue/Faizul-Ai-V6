@@ -28,7 +28,7 @@ class ImageGenRepository(private val imageHistoryDao: ImageHistoryDao) {
             else -> 1024 to 1024
         }
         val encodedPrompt = try {
-            java.net.URLEncoder.encode(prompt, "UTF-8")
+            java.net.URLEncoder.encode(prompt, "UTF-8").replace("+", "%20")
         } catch (e: Exception) {
             prompt.replace(" ", "%20")
         }
