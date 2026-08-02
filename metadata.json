@@ -1,0 +1,6 @@
+{
+  "name": "Faizul AI",
+  "description": "Ultimate AI Assistant created by Faizul Maram featuring Live Voice, Vision AI, PDF AI, Image Generation, Study & Coding Tools, and Chat History.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
