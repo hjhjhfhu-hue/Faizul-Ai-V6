@@ -43,6 +43,8 @@ jobs:
         fi
 
     - name: Build Debug APK
+      env:
+        JAVA_TOOL_OPTIONS: "-Djava.awt.headless=true"
       run: ./gradlew assembleDebug --no-configuration-cache --stacktrace
 
     - name: Upload APK Artifact
